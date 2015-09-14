@@ -1,0 +1,92 @@
+@import 'variables';
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+	padding: $padBody;
+}
+#header,#footer{
+	background-color: $headFootColor;
+	border:none;
+}
+#slider{
+	width: $sliderWidth;
+	height: $sliderHeight;
+	overflow: hidden;
+}
+.carousel{
+	max-height:$carouselHeight;
+	overflow: hidden;
+}
+.item{
+	img{
+		width: $imgWidth;
+		position: static;
+	}
+}
+.catBox{
+	text-align: left;
+}
+@media(max-width:992px){
+	.galImg{
+		height: $galImgHeight;
+		margin: 0 auto;
+	}
+}
+@media(max-width:992px){
+	.catBox{
+	text-align: center;
+	}
+}
+.uploader{
+	margin: $formMargin;
+	select{
+		margin-bottom: $selectMargBottom;
+	}
+	input{
+		margin-bottom: $inputMargBottom;
+
+	}
+}
+.poster{
+	margin: $formMargin;
+	select{
+		margin-bottom: $selectMargBottom;
+	}
+	input{
+		margin-bottom: $inputMargBottom;
+
+	}
+}
+
+@media(max-width:992px){
+	.poster{
+	margin-top: $postMediaMargTop;
+	
+	}
+}
+
+
+
+.sideImagesInfo{
+	overflow: hidden;
+}
+
+#drop{
+	
+	background-color: white;
+}
+.nav{
+	.open{
+		
+		#drop{
+	
+			background-color: #ccc;
+		}
+	}
+}
+#menu-button{
+	background-color: black;
+}
+// 

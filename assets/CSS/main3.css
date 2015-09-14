@@ -1,0 +1,64 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  padding: 30px 25px 90px 25px; }
+
+#header, #footer {
+  background-color: white;
+  border: none; }
+
+#slider {
+  width: 93vw;
+  height: 750px;
+  overflow: hidden; }
+
+.carousel {
+  max-height: 60vw;
+  overflow: hidden; }
+
+.item img {
+  width: 100%;
+  position: static; }
+
+.catBox {
+  text-align: left; }
+
+@media (max-width: 992px) {
+  .galImg {
+    height: 60vw;
+    margin: 0 auto; } }
+@media (max-width: 992px) {
+  .catBox {
+    text-align: center; } }
+.uploader {
+  margin: 20px; }
+  .uploader select {
+    margin-bottom: 10px; }
+  .uploader input {
+    margin-bottom: 20px; }
+
+.poster {
+  margin: 20px; }
+  .poster select {
+    margin-bottom: 10px; }
+  .poster input {
+    margin-bottom: 20px; }
+
+@media (max-width: 992px) {
+  .poster {
+    margin-top: 150px; } }
+.sideImagesInfo {
+  overflow: hidden; }
+
+#drop {
+  background-color: white; }
+
+.nav .open #drop {
+  background-color: #ccc; }
+
+#menu-button {
+  background-color: black; }
+
+/*# sourceMappingURL=main3.css.map */
