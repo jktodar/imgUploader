@@ -16,7 +16,7 @@ if (!isset($_SESSION['username'])) {
   $redirect_page = 'login.php';
   header('Location: '.$redirect_page);
 }else{
-  $dbUser = $_SESSION['username'];
+  $currentUser = $_SESSION['UserNameIn'];
   echo "Hello ". $dbUser."<br>";
   require_once 'uploadFile.php';
     }
@@ -25,6 +25,7 @@ if (!isset($_SESSION['username'])) {
 ?>
 
 <div class="container">
+  <span class='helloUser'><?php echo "Hello ". $currentUser."<br>"; ?></span>
   <div class="row">
     <div class="col-md-6">
       <div class="row">

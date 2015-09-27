@@ -18,25 +18,30 @@ require_once 'header.php';
     $res = $DBCon->connection->query($sql);
 
     $numrows = $res->num_rows;
+    $numrows = $res->num_rows;
 
-      if ($numrows) {
+      while ($numrows) {
         $row = $res->fetch_array();
         $dbUser = $row['username'];
         $dbPass1 = $row['password1'];
         $dbPass2 = $row['password2'];
+        echo $dbUser;
+        echo $UserNameIn;
 
-        if ((crypt($Pass1In, $dbPass1) == $dbPass1) && crypt($Pass2In, $dbPass2) == $dbPass2) {
+        if ((crypt($UserNameIn, $dbUser) == $dbUser) && (crypt($Pass1In, $dbPass1) == $dbPass1)
+          &&  crypt($Pass2In, $dbPass2) == $dbPass2 ) {
+          
         
-          $_SESSION['UserNameIn']= $UserNameIn;
+          $_SESSION['UserNameIn'] = $UserNameIn;
           $_SESSION['username'] = $dbUser;
           $redirect_page = 'upload_dropdown2.php';
           header('Location: '.$redirect_page);
         }else{
           echo $loginErrMsg;
+          break;
         }
-      }else {
-        echo $loginErrMsg;
       }
+     
     }else{
     echo "Please complete all fields";
     }
@@ -50,6 +55,3 @@ require_once 'header.php';
   </form>
 
 <?php require_once 'footer.php'; ?>
-
-
-
