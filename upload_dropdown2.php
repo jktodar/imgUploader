@@ -16,23 +16,26 @@ if (!isset($_SESSION['username'])) {
   $redirect_page = 'login.php';
   header('Location: '.$redirect_page);
 }else{
-  $currentUser = $_SESSION['UserNameIn'];
-  echo "Hello ". $dbUser."<br>";
+  $dbUser = $_SESSION['username'];
+  
   require_once 'uploadFile.php';
     }
   require_once 'header_logged_in.php';
   require_once 'classes.php';
+
 ?>
 
 <div class="container">
-  <span class='helloUser'><?php echo "Hello ". $currentUser."<br>"; ?></span>
+
   <div class="row">
+    <span class='helloUser'><?php echo "Hello ". $dbUser."<br>"; ?></span>
     <div class="col-md-6">
       <div class="row">
         <div class="col-md-11">
           <?php
             $maxSize = 2097152;
             $result = array();
+
             ?>
             <?php
 if ($submitted) {
@@ -76,4 +79,4 @@ if ($submitted) {
     ?>
   </div>
 </div>
-<?php require_once 'footer_logout.php'; ?>
+<?php require_once 'footer.php'; ?>
